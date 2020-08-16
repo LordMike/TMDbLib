@@ -172,7 +172,6 @@ namespace TMDbLib.Objects.Discover
         public DiscoverTv WhereRuntimeIsAtLeast(int runtime)
         {
             Parameters["with_runtime.gte"] = runtime.ToString();
-
             return this;
         }
 
@@ -182,7 +181,6 @@ namespace TMDbLib.Objects.Discover
         public DiscoverTv WhereRuntimeIsAtMost(int runtime)
         {
             Parameters["with_runtime.lte"] = runtime.ToString();
-
             return this;
         }
 
@@ -192,7 +190,6 @@ namespace TMDbLib.Objects.Discover
         public DiscoverTv IncludeNullFirstAirDates(bool include)
         {
             Parameters["include_null_first_air_dates"] = include.ToString();
-
             return this;
         }
 
@@ -227,7 +224,6 @@ namespace TMDbLib.Objects.Discover
         public DiscoverTv WhereCompaniesInclude(IEnumerable<int> companyIds)
         {
             Parameters["with_companies"] = string.Join(",", companyIds.Select(s => s.ToString()));
-
             return this;
         }
 
@@ -237,7 +233,6 @@ namespace TMDbLib.Objects.Discover
         public DiscoverTv WhereScreenedTheatrically(bool theatrical)
         {
             Parameters["screened_theatrically"] = theatrical.ToString();
-
             return this;
         }
 
@@ -274,8 +269,5 @@ namespace TMDbLib.Objects.Discover
             Parameters["without_keywords"] = string.Join("|", keywordIds.Select(s => s.ToString()));
             return this;
         }
-
-
-
     }
 }
